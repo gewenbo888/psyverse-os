@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>PsyVerse — The Internet of Verifiable Intelligence | 可验证智能互联网</title>
+
+<!-- SEO · GEO -->
+<meta name="description" content="PsyVerse is a living universe of verifiable intelligence — a neural network of blockchain states, AI agents, recursive proofs, and civilization-scale computation. Bilingual EN / 中文.">
+<meta name="keywords" content="PsyVerse, Psy Protocol, verifiable intelligence, blockchain state, recursive proofs, ZK proofs, AI agents, WASM execution, zk-EVM, Plonky2, civilization-scale computation, 可验证智能, Psy 协议, 零知识证明, AI 代理">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://psyverse-os.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://psyverse-os.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://psyverse-os.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://psyverse-os.psyverse.fun/">
+<meta property="og:title" content="PsyVerse — The Internet of Verifiable Intelligence">
+<meta property="og:description" content="A living neural network of blockchain states, AI agents, recursive proofs, and civilizations.">
+<meta property="og:url" content="https://psyverse-os.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PsyVerse · 可验证智能互联网">
+<meta name="twitter:description" content="A living universe of verifiable intelligence.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0c">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PsyVerse",
+  "description": "A living universe of verifiable intelligence — blockchain states, AI agents, recursive proofs, and civilization-scale computation.",
+  "url": "https://psyverse-os.psyverse.fun/",
+  "inLanguage": ["en", "zh-CN"],
+  "author": { "@type": "Person", "name": "Gewenbo", "url": "https://psyverse.fun/" },
+  "publisher": { "@type": "Organization", "name": "Psyverse", "url": "https://psyverse.fun/" }
+}
+</script>
+<!-- /SEO · GEO -->
+
+<link rel="icon" type="image/svg+xml" href="/psi-glyph.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+</head>
+<body>
+
+<!-- ===== Neural-universe canvas (fixed background) ===== -->
+<canvas id="neural-bg"></canvas>
+
+<!-- ===== Topbar ===== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="brand">
+      <span class="seal"><img src="/psi-glyph.svg" alt="Psy"></span>
+      <span lang="en">Psy<em>Verse</em></span>
+      <span lang="zh">Psy<em>Verse</em></span>
+    </a>
+    <nav class="nav">
+      <a href="#state"><span lang="en">State</span><span lang="zh">状态</span></a>
+      <a href="#explainer"><span lang="en">AI Explainer</span><span lang="zh">AI 解读</span></a>
+      <a href="#topology"><span lang="en">Topology</span><span lang="zh">拓扑</span></a>
+      <a href="#civilization"><span lang="en">Civilization</span><span lang="zh">文明</span></a>
+      <a href="#proof"><span lang="en">Proof Layer</span><span lang="zh">证明层</span></a>
+      <a href="#dev"><span lang="en">Developers</span><span lang="zh">开发者</span></a>
+    </nav>
+    <div class="toolbar">
+      <div class="theme-toggle"><button data-theme-set="light">◐</button><button data-theme-set="dark" class="active">◑</button></div>
+      <div class="lang-toggle"><button data-lang="en" class="active">EN</button><button data-lang="zh">中文</button></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span lang="en">Mainnet · realm 0 · live (illustrative)</span>
+    <span lang="zh">主网 · realm 0 · 实时（示意）</span>
+  </div>
+
+  <h1>
+    <span lang="en">The Internet of <em>Verifiable Intelligence</em>.</span>
+    <span lang="zh"><em>可验证智能</em>互联网。</span>
+  </h1>
+
+  <p class="hero-sub">
+    <span lang="en">A living neural network of blockchain states, AI agents, recursive proofs, and civilization-scale computation. Every transition is checked. Every claim ships with its proof.</span>
+    <span lang="zh">一张由区块链状态、AI 代理、递归证明与文明级计算构成的活神经网络。每一次状态转移都被核验，每一项主张都附带其证明。</span>
+  </p>
+
+  <div class="hero-counters">
+    <div class="counter">
+      <span class="num" data-counter="tps">0</span>
+      <div class="label"><span lang="en">tx / sec</span><span lang="zh">交易 / 秒</span></div>
+    </div>
+    <div class="counter">
+      <span class="num" data-counter="proofs">0</span>
+      <div class="label"><span lang="en">proofs / hr</span><span lang="zh">证明 / 小时</span></div>
+    </div>
+    <div class="counter">
+      <span class="num" data-counter="contracts">0</span>
+      <div class="label"><span lang="en">contracts alive</span><span lang="zh">合约存活</span></div>
+    </div>
+    <div class="counter">
+      <span class="num" data-counter="agents">0</span>
+      <div class="label"><span lang="en">AI agents online</span><span lang="zh">AI 代理在线</span></div>
+    </div>
+  </div>
+  <div class="counters-note">
+    <span lang="en">// counters above animate on a synthetic seed for demo purposes — not pinned to live mainnet RPC</span>
+    <span lang="zh">// 以上计数器以合成种子动画呈现，仅作演示——未对接实时主网 RPC</span>
+  </div>
+
+  <div class="hero-actions">
+    <a class="btn primary" href="#state">
+      <span lang="en">Enter PsyVerse</span><span lang="zh">进入 PsyVerse</span>
+    </a>
+    <a class="btn" href="#topology">
+      <span lang="en">Explore network</span><span lang="zh">浏览网络</span>
+    </a>
+    <a class="btn" href="#state">
+      <span lang="en">View state diff</span><span lang="zh">查看状态差</span>
+    </a>
+    <a class="btn" href="https://psy.psyverse.fun" target="_blank" rel="noopener">
+      <span lang="en">Open Psy Protocol →</span><span lang="zh">打开 Psy 协议 →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 1. Live state visualization ===== -->
+<section id="state">
+  <div class="section-eyebrow"><span lang="en">01 · Live State</span><span lang="zh">01 · 实时状态</span></div>
+  <h2 class="section-title"><span lang="en">Every state-root transition, visible</span><span lang="zh">每一次状态根转移可见</span></h2>
+  <p class="section-lede"><span lang="en">A transaction batch enters WASM execution, a circuit is compiled, a recursive proof is generated, the next state root is committed. PsyVerse renders this loop in real time — contracts as nodes, transitions as flow, proofs as the accent that closes each cycle.</span><span lang="zh">一批交易进入 WASM 执行，电路被编译，递归证明被生成，新状态根被提交。PsyVerse 实时呈现该循环——合约为节点，转移为流动，证明为收尾每一周期之亮色。</span></p>
+
+  <div class="glass" id="live-state-wrap">
+    <div id="live-state"></div>
+  </div>
+</section>
+
+<!-- ===== 2. AI Explainer ===== -->
+<section id="explainer">
+  <div class="section-eyebrow"><span lang="en">02 · AI Explainer</span><span lang="zh">02 · AI 解读</span></div>
+  <h2 class="section-title"><span lang="en">The chain explains itself</span><span lang="zh">链自我解读</span></h2>
+  <p class="section-lede"><span lang="en">An on-chain event is just bytes — until something reads them in plain language. PsyVerse's explainer agent narrates state-changes, flags anomalies, and writes the diff so a human can decide whether to care, in seconds rather than hours.</span><span lang="zh">链上事件不过是字节——直到有人以自然语言读它。PsyVerse 解读代理叙述状态变更、标记异常、撰写差异，使人在秒级内决定是否关心，而非小时。</span></p>
+
+  <div class="grid three">
+    <div class="card">
+      <div class="meta"><span lang="en">▸ change feed</span><span lang="zh">▸ 变更流</span></div>
+      <h3><span lang="en">What just changed</span><span lang="zh">刚刚发生了什么</span></h3>
+      <p lang="en">A transformer reads each block's diff and writes a one-paragraph summary: which contracts moved, which tokens shifted, which functions ran. The chain stops being a wall of hashes.</p>
+      <p lang="zh">Transformer 读取每一区块的差异，写出一段话总结：哪些合约动了、哪些代币流动、哪些函数执行。链不再是一堵哈希之墙。</p>
+    </div>
+    <div class="card cyan">
+      <div class="meta"><span lang="en">▸ risk</span><span lang="zh">▸ 风险</span></div>
+      <h3><span lang="en">Risk read at glance</span><span lang="zh">一眼读风险</span></h3>
+      <p lang="en">The agent classifies events as routine, unusual, or critical based on contract reputation, slot churn, and whale activity. A green-amber-red signal you can route to a notification.</p>
+      <p lang="zh">代理根据合约信誉、槽位变动、巨鲸活动，将事件归类为常规、异常或关键。一种可路由至通知系统的绿—黄—红信号。</p>
+    </div>
+    <div class="card violet">
+      <div class="meta"><span lang="en">▸ whale</span><span lang="zh">▸ 巨鲸</span></div>
+      <h3><span lang="en">Who is moving</span><span lang="zh">谁在动</span></h3>
+      <p lang="en">Identity is private; behaviour is observable. The explainer stitches addresses into "actors" and tells you when an actor's pattern shifts — a fund rebalancing, a treasury event, an exit.</p>
+      <p lang="zh">身份私密，行为可见。解读器将地址拼接为"行动者"，并告诉您某行动者的模式何时变化——基金再平衡、国库事件、退出。</p>
+    </div>
+    <div class="card rose">
+      <div class="meta"><span lang="en">▸ anomaly</span><span lang="zh">▸ 异常</span></div>
+      <h3><span lang="en">Anomaly detection</span><span lang="zh">异常检测</span></h3>
+      <p lang="en">A re-entrancy attempt, a flash-loan spike, an unauthorized upgrade. The agent learns the normal shape of each contract and flags the deltas that break it.</p>
+      <p lang="zh">重入攻击企图、闪电贷激增、未授权升级。代理学习每个合约的常态形状，并标记打破它的差异。</p>
+    </div>
+    <div class="card gold">
+      <div class="meta"><span lang="en">▸ proof</span><span lang="zh">▸ 证明</span></div>
+      <h3><span lang="en">Proof verification status</span><span lang="zh">证明验证状态</span></h3>
+      <p lang="en">Every recursive proof carries a verifier handle. The explainer confirms each step — circuit fingerprint, witness commitment, final π — and reports any mismatch in the same feed.</p>
+      <p lang="zh">每个递归证明带验证句柄。解读器逐步确认——电路指纹、见证承诺、最终 π——并在同一流中报告任何不一致。</p>
+    </div>
+    <div class="card">
+      <div class="meta"><span lang="en">▸ context</span><span lang="zh">▸ 上下文</span></div>
+      <h3><span lang="en">Context attached</span><span lang="zh">附带上下文</span></h3>
+      <p lang="en">Every summary is linked back to the relevant state root, the relevant proof, the relevant contracts. Click through the AI text and arrive at the underlying primitives — no opaque verdict.</p>
+      <p lang="zh">每条总结皆链回相应的状态根、证明、合约。点穿 AI 文本即抵达底层原语——无任何不透明的判定。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. Topology ===== -->
+<section id="topology">
+  <div class="section-eyebrow"><span lang="en">03 · Network Topology</span><span lang="zh">03 · 网络拓扑</span></div>
+  <h2 class="section-title"><span lang="en">A coordinator, four realms, many provers</span><span lang="zh">一协调器，四个域，多证明者</span></h2>
+  <p class="section-lede"><span lang="en">PsyVerse is sharded into realms — each a parallel universe of contracts and state — under a single coordinator. Validators watch each realm; provers race to compress its computation; relayers translate to L1 and across chains. The topology is the architecture made visible.</span><span lang="zh">PsyVerse 按域分片——每域为合约与状态的平行宇宙——共置于单一协调器之下。验证者各自看守一域；证明者竞速压缩其计算；中继向 L1 与跨链翻译。拓扑即架构之可见。</span></p>
+
+  <div class="glass topology" id="topology-wrap">
+    <div id="topology"></div>
+  </div>
+</section>
+
+<!-- ===== 4. Civilization engine ===== -->
+<section id="civilization">
+  <div class="section-eyebrow"><span lang="en">04 · Civilization Engine</span><span lang="zh">04 · 文明引擎</span></div>
+  <h2 class="section-title"><span lang="en">From neurons to network civilization</span><span lang="zh">自神经元至网络文明</span></h2>
+  <p class="section-lede"><span lang="en">Five rungs in three billion years. Each builds on the last; none replaces it. Modern civilization is still running every layer at once — the neuron, the chip, the model, the chain, the network.</span><span lang="zh">三十亿年的五级阶梯。每一级都构建于前一级之上，且不取代之。现代文明仍在同时运转所有层——神经元、芯片、模型、链、网络。</span></p>
+
+  <div class="timeline">
+    <div class="t-cell">
+      <div class="step"><span lang="en">01 · Brain</span><span lang="zh">01 · 大脑</span></div>
+      <h4><span lang="en">Neurons</span><span lang="zh">神经元</span></h4>
+      <div class="when"><span lang="en">~600 Mya</span><span lang="zh">约六亿年前</span></div>
+      <p lang="en">A cell that fires when stimulated. Stack 86 billion of them with 10¹⁴ synapses and you get a brain — the first general-purpose cognitive substrate.</p>
+      <p lang="zh">受刺激即放电的细胞。叠加 860 亿个、加上 10¹⁴ 突触，你便有了大脑——首个通用认知基底。</p>
+    </div>
+    <div class="t-cell">
+      <div class="step"><span lang="en">02 · Chip</span><span lang="zh">02 · 芯片</span></div>
+      <h4><span lang="en">GPU</span><span lang="zh">GPU</span></h4>
+      <div class="when"><span lang="en">~2007+</span><span lang="zh">约 2007 年起</span></div>
+      <p lang="en">Many small parallel multiply-adds. Same operation, millions of independent inputs. A chip whose architecture happens to fit neural networks like a glove.</p>
+      <p lang="zh">大量并行小乘加。同一运算施于数百万独立输入。其架构恰似为神经网络量身定制的芯片。</p>
+    </div>
+    <div class="t-cell">
+      <div class="step"><span lang="en">03 · Model</span><span lang="zh">03 · 模型</span></div>
+      <h4><span lang="en">Transformer</span><span lang="zh">Transformer</span></h4>
+      <div class="when"><span lang="en">~2017+</span><span lang="zh">约 2017 年起</span></div>
+      <p lang="en">An attention-mechanism architecture trained on most of human-written text. The first cognition you can rent by the token.</p>
+      <p lang="zh">在人类几乎全部书写文本上训练的注意力机制架构。可按词元租赁的认知。</p>
+    </div>
+    <div class="t-cell">
+      <div class="step"><span lang="en">04 · Chain</span><span lang="zh">04 · 链</span></div>
+      <h4><span lang="en">Verifiable state</span><span lang="zh">可验证状态</span></h4>
+      <div class="when"><span lang="en">~2009 → recursion 2019+</span><span lang="zh">约 2009 → 递归 2019 起</span></div>
+      <p lang="en">A ledger that any third party can check. Recursive proofs collapse arbitrary computation into a single π. Civilization scale becomes affordable.</p>
+      <p lang="zh">任意第三方皆可核验的账本。递归证明将任意计算坍缩为单一 π。文明级规模变得可负担。</p>
+    </div>
+    <div class="t-cell">
+      <div class="step"><span lang="en">05 · PsyVerse</span><span lang="zh">05 · PsyVerse</span></div>
+      <h4><span lang="en">Network civilization</span><span lang="zh">网络文明</span></h4>
+      <div class="when"><span lang="en">2025 — emerging</span><span lang="zh">2025 起 · 涌现中</span></div>
+      <p lang="en">Brains and chips, models and chains, agents and proofs, all routed through one coordinated substrate. Every claim verifiable. Every actor identifiable when it chooses. A civilization that can audit itself.</p>
+      <p lang="zh">脑与芯、模型与链、代理与证明，皆经一个协调基底路由。每一主张可验证。每一行动者在其选择时可识别。一个能自我审计的文明。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. Proof layer ===== -->
+<section id="proof">
+  <div class="section-eyebrow"><span lang="en">05 · Proof Layer</span><span lang="zh">05 · 证明层</span></div>
+  <h2 class="section-title"><span lang="en">Every state can be proven. Every computation can be verified.</span><span lang="zh">每个状态皆可证明。每次计算皆可验证。</span></h2>
+
+  <div class="proof-panel">
+    <div class="glass">
+      <h3><span lang="en">A state transition is a proof</span><span lang="zh">一次状态转移即一个证明</span></h3>
+      <p lang="en" style="color: var(--ink-soft); line-height: 1.6;">Each block's transition from old root to new is encoded as a circuit. A prover supplies a witness; verifies the relation; emits a succinct π. The chain accepts the new root if and only if π checks. No social trust required at the verifier.</p>
+      <p lang="zh" style="color: var(--ink-soft); line-height: 1.6;">每一区块由旧根至新根的转移被编码为电路。证明者提供见证；验证其关系；发出简洁的 π。仅当 π 通过验证，链方接受新根。验证者无须任何社会信任。</p>
+      <div class="equation">
+        <span lang="en">
+          C(<span class="accent2">state</span>, <span class="accent3">witness</span>) → <span class="accent">π</span><br>
+          V(<span class="accent">π</span>, <span class="accent2">state</span>) → {0, 1}<br>
+          ⟹  <span class="accent">π is the new root's only legitimacy</span>
+        </span>
+        <span lang="zh">
+          C(<span class="accent2">状态</span>, <span class="accent3">见证</span>) → <span class="accent">π</span><br>
+          V(<span class="accent">π</span>, <span class="accent2">状态</span>) → {0, 1}<br>
+          ⟹  <span class="accent">π 即新状态根的唯一合法性</span>
+        </span>
+      </div>
+    </div>
+    <div class="glass">
+      <h3><span lang="en">Recursion folds it into one π</span><span lang="zh">递归将其折叠为单一 π</span></h3>
+      <p lang="en" style="color: var(--ink-soft); line-height: 1.6;">Each π_n verifies π_{n-1}. An entire epoch — millions of transactions, thousands of contracts, billions of operations — collapses into one constant-size proof. The L1 verifies a single object. Civilization-scale computation rides on top.</p>
+      <p lang="zh" style="color: var(--ink-soft); line-height: 1.6;">每一 π_n 验证 π_{n-1}。整个纪元——数百万笔交易、数千份合约、数十亿次操作——坍缩为单一常数大小的证明。L1 仅验证一个对象。文明级计算搭载其上。</p>
+      <div class="equation">
+        <span lang="en">
+          π_1 = <span class="accent2">prove</span>(C_1, w_1)<br>
+          π_2 = <span class="accent2">prove</span>(C_2, w_2, <span class="accent">π_1</span>)<br>
+          …<br>
+          π_n = <span class="accent2">prove</span>(C_n, w_n, <span class="accent">π_{n-1}</span>)<br>
+          <span class="accent3">|π_n| = O(1)</span>
+        </span>
+        <span lang="zh">
+          π_1 = <span class="accent2">prove</span>(C_1, w_1)<br>
+          π_2 = <span class="accent2">prove</span>(C_2, w_2, <span class="accent">π_1</span>)<br>
+          …<br>
+          π_n = <span class="accent2">prove</span>(C_n, w_n, <span class="accent">π_{n-1}</span>)<br>
+          <span class="accent3">|π_n| = O(1)</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. Developer ecosystem ===== -->
+<section id="dev">
+  <div class="section-eyebrow"><span lang="en">06 · Developer Ecosystem</span><span lang="zh">06 · 开发者生态</span></div>
+  <h2 class="section-title"><span lang="en">Five primitives. One coherent surface.</span><span lang="zh">五项原语。一个统一接口。</span></h2>
+  <p class="section-lede"><span lang="en">SDKs to call the chain. APIs to subscribe to its state. A WASM runtime to deploy contracts. Proof-native circuits for cryptographic guarantees. An agent framework so AI inferences can ship as verifiable artefacts. All under one coordinated namespace.</span><span lang="zh">SDK 调用链。API 订阅状态。WASM 运行时部署合约。证明原生电路提供加密保证。代理框架让 AI 推理作为可验证的器物发布。一切置于同一协调命名空间。</span></p>
+
+  <div class="code-grid">
+    <div class="code-tabs">
+      <button class="code-tab active" data-code="sdk">
+        <span class="label"><span lang="en">SDK</span><span lang="zh">SDK</span></span>
+        <span class="desc"><span lang="en">TypeScript / Rust</span><span lang="zh">TypeScript / Rust</span></span>
+      </button>
+      <button class="code-tab" data-code="api">
+        <span class="label"><span lang="en">API</span><span lang="zh">API</span></span>
+        <span class="desc"><span lang="en">JSON-RPC, WebSocket</span><span lang="zh">JSON-RPC, WebSocket</span></span>
+      </button>
+      <button class="code-tab" data-code="wasm">
+        <span class="label"><span lang="en">WASM Runtime</span><span lang="zh">WASM 运行时</span></span>
+        <span class="desc"><span lang="en">Proof-native contracts</span><span lang="zh">证明原生合约</span></span>
+      </button>
+      <button class="code-tab" data-code="agent">
+        <span class="label"><span lang="en">AI Agents</span><span lang="zh">AI 代理</span></span>
+        <span class="desc"><span lang="en">Verifiable inference</span><span lang="zh">可验证推理</span></span>
+      </button>
+      <button class="code-tab" data-code="explorer">
+        <span class="label"><span lang="en">Explorer</span><span lang="zh">浏览器</span></span>
+        <span class="desc"><span lang="en">GraphQL state queries</span><span lang="zh">GraphQL 状态查询</span></span>
+      </button>
+    </div>
+    <div class="code-panel" id="code-panel"></div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5><span lang="en">Build</span><span lang="zh">构建</span></h5>
+      <a href="#dev"><span lang="en">SDK Docs</span><span lang="zh">SDK 文档</span></a>
+      <a href="https://github.com/gewenbo888"><span lang="en">GitHub</span><span lang="zh">GitHub</span></a>
+      <a href="#dev"><span lang="en">API Reference</span><span lang="zh">API 参考</span></a>
+      <a href="#dev"><span lang="en">WASM Runtime</span><span lang="zh">WASM 运行时</span></a>
+    </div>
+    <div class="footer-col">
+      <h5><span lang="en">Network</span><span lang="zh">网络</span></h5>
+      <a href="#topology"><span lang="en">Explorer</span><span lang="zh">浏览器</span></a>
+      <a href="#state"><span lang="en">State Diff</span><span lang="zh">状态差</span></a>
+      <a href="#topology"><span lang="en">Topology</span><span lang="zh">拓扑</span></a>
+      <a href="#proof"><span lang="en">Proof Verifier</span><span lang="zh">证明验证器</span></a>
+    </div>
+    <div class="footer-col">
+      <h5><span lang="en">Read</span><span lang="zh">阅读</span></h5>
+      <a href="https://psy.psyverse.fun" target="_blank" rel="noopener"><span lang="en">Whitepaper</span><span lang="zh">白皮书</span></a>
+      <a href="https://psy.psyverse.fun" target="_blank" rel="noopener"><span lang="en">Psy Protocol</span><span lang="zh">Psy 协议</span></a>
+      <a href="https://zk-civilization.psyverse.fun" target="_blank" rel="noopener"><span lang="en">ZK Civilization</span><span lang="zh">零知识文明</span></a>
+      <a href="https://psyverse.fun" target="_blank" rel="noopener"><span lang="en">Psyverse Portfolio</span><span lang="zh">Psyverse 作品集</span></a>
+    </div>
+    <div class="footer-col">
+      <h5><span lang="en">Community</span><span lang="zh">社群</span></h5>
+      <a href="https://github.com/gewenbo888/psyverse-os"><span lang="en">GitHub</span><span lang="zh">GitHub</span></a>
+      <a href="https://psyverse.fun" target="_blank" rel="noopener"><span lang="en">Manifesto</span><span lang="zh">宣言</span></a>
+      <a href="#"><span lang="en">Twitter / X</span><span lang="zh">Twitter / X</span></a>
+      <a href="#"><span lang="en">Discord</span><span lang="zh">Discord</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span lang="en">© 2026 PsyVerse · built by <a href="https://psyverse.fun" style="color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2);">Gewenbo</a></span>
+    <span lang="zh">© 2026 PsyVerse · 由 <a href="https://psyverse.fun" style="color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2);">Gewenbo</a> 制作</span>
+    <span>verifiable intelligence · 可验证智能</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
